@@ -23,6 +23,7 @@ const PrivateScreen = () => {
                 try {
                     const { data } = await axios.get("/api/private", config);
                     setPrivateData(data.data);
+                    
                 } catch (error) {
                     localStorage.removeItem("authToken");
                     setError("Unauthorized");
@@ -38,10 +39,12 @@ const PrivateScreen = () => {
             history("/login");
             
         }
+        
         return (
             error ? <span className="error-message">{error}</span> : <>
                 <div style={{ background: 'green', color: "white" }}>
-                {privateData}
+                    {privateData}
+                    
                 </div>    
     
                 <button onClick={LogoutHandler} >Logout</button>

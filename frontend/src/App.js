@@ -19,11 +19,7 @@ const App = () => {
           <Route exact path="*" element={<PrivateRoute path="/" exact element={<PrivateScreen></PrivateScreen>}/> }/>
           <Route exact path="/login" element={<LoginScreen/>} />
           <Route exact path="/register" element={<RegisterScreen/>} />
-          <Route
-            exact
-            path="/forgotpassword"
-            element={<ForgotPasswordScreen/>}
-          />
+          <Route exact path="/forgotpassword" element={<ForgotPasswordScreen/>}/>
           <Route
             exact
             path="/resetpassword/:resetToken"
